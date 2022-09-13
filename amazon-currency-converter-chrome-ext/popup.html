@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./vendor/bootstrap.min.css" />
+		<style>
+			.popup {
+				height: 140px;
+				width: 100px;
+				background-color: white;
+			}
+			.form-check-input:checked {
+				background-color: #ff9900;
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(255, 255, 255, 1)'/></svg>") !important;
+				border-color: #ff9900;
+			}
+			.form-check-input:focus {
+				border-color: #ff9900;
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, 0.25)'/></svg>") !important;
+				box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 25%);
+			}
+			.form-check-input:checked:focus {
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(255, 255, 255, 1)'/></svg>") !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="popup d-flex align-items-center justify-content-center flex-column py-4">
+			<img src="./images/amazon-currency-converter-chrome-ext-icon-128.png" class="img-fluid" width="60" alt="" />
+
+			<p class="m-0 text-black">On/Off</p>
+
+			<div class="form-check form-switch d-flex align-items-center justify-content-center mt-2">
+				<input class="form-check-input" type="checkbox" role="switch" id="toggleState" />
+			</div>
+		</div>
+
+		<script src="./vendor/bootstrap.bundle.min.js"></script>
+		<script src="./vendor/jquery-3.6.0.min.js"></script>
+		<script src="./popup.js"></script>
+	</body>
+</html>

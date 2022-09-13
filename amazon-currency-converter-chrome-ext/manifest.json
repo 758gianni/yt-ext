@@ -1,0 +1,40 @@
+{
+    "name": "Amazon Currency Converter",
+    "short_name": "Currency Converter",
+    "description": "A chrome extension that converts USD prices into XCD prices on Amazon.",
+    "author": "Gianni Belizaire",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "vendor/jquery-3.6.0.min.js",
+                "content-script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_title": "Amazon Currency Converter",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "/images/amazon-currency-converter-chrome-ext-icon-48.png",
+            "128": "/images/amazon-currency-converter-chrome-ext-icon-128.png"
+        }
+    },
+    "icons": {
+        "48": "/images/amazon-currency-converter-chrome-ext-icon-48.png",
+        "128": "/images/amazon-currency-converter-chrome-ext-icon-128.png"
+    }
+}
